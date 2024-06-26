@@ -1,11 +1,46 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+# Welcome to bottest.ai!
 
-## What is Nextra?
+import StyledImage from "../components/styledImage";
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+bottest.ai is a feature-rich chatbot testing platform that enables
+teams to develop their AI-based chatbots with confidence in its
+quality, reliability, performance, and safety.
 
-## Documentation
+By using bottest.ai, teams save countless hours each week automating their
+testing procedures. Instead of spending time copy and pasting the prompts from spreadsheet
+to chatroom after each change in the AI, teams can focus on what matters:
+building and improving their product.
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+User queries, expected results, actual results, detailed diagnoses on failures,
+and important analytics are stored all in one platform for your team. Whether
+your team is working with one AI-chatbot or a collection of them, you'll understand
+how your chatbot(s) are performing and exactly where they are lacking.
+
+import Image from "next/image";
+
+<StyledImage path="/assets/overview.svg" />
+
+Developing and scaling an AI chatbot is difficult without the right testing tools. Teams will often
+develop their own makeshift tools and processes to alleviate the unique challenges that break traditional
+software testing paradigms:
+
+- **Language based responses are subjective and non-deterministic.** Unlike traditional software testing, where
+you have an input with a determined expected output, responses from a chatbot need to be graded based on semantic
+meaning.
+- **Upgrades or improvements in the AI can cause unforseen issues elsewhere.** Each change to the underlying LLM or AI model may improve
+the quality of answers on some questions, but cause quality degredation on other prompts. It's practically
+impossible to develop a high quality AI chatbot without some level of regression testing.
+- **The subject matter experts often aren't the ones maintaining the code.** The people in your team
+who can best determine how the chatbot should perform are rarely the same engineers working on maintaining
+the tests.
+
+bottest.ai addresses each of these unique challenges with a suite of features to bring your chatbot's
+quality, performance, and safety to the next level. Our **AI-powered Evaluation Engine** detects changes in
+the content and tone of responses, and allows for complete customization of how Tests should be passed or failed.
+Have confidence in your chatbot's reliability with our full **Suite Test Runs**, and understand overall trends
+and changes on an individual Test level with the automatically generated Suite Run Report. Setup, record, and
+replay Tests all from the UI with **no code or technical experience needed**—so the subject matter experts can
+be directly involved with the testing process.
+
+
+Get started testing now with the [Quickstart Tutorial](/getting-started/quickstart-tutorial).

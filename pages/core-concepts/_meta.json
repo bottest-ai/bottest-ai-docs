@@ -1,0 +1,11 @@
+{
+    "bots": "Bots",
+    "suites": "Suites",
+    "environments": "Environments",
+    "tests": "Tests",
+    "variants": "Variants",
+    "baselines": "Baselines",
+    "evaluations": "Evaluations",
+    "test-runs": "Test Runs",
+    "suite-runs": "Suite Runs"
+}
