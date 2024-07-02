@@ -1,0 +1,38 @@
+# Evaluations
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+import { Callout } from "nextra/components";
+
+This guide will go over understanding what an Evaluation is and how an Evaluation relates to the other
+bottest.ai concepts.
+
+At its core, an Evaluation represents **a determination by the bottest.ai Test Evaluator whether
+responses in a specific, unique conversation match at least one Baseline.** This is the smallest granularity
+for testing, and each Evaluation is either a Pass or a Fail.
+
+When a conversation is being evaluated, the Test's Success Criteria is used to determine the Pass or Fail.
+
+The number of Evaluations that will run for a specific Test depends on two factors:
+1. The number of Variants defined for the Test
+1. The number of iterations defined in the Test (the number of times each Variant will
+be ran). Multiple iterations are performed of each Variant to measure the consistency
+in responses provided by the Bot.
+
+<Callout type="info" emoji="ℹ️">
+  Generally, LLMs are nondeterministic, and prompting the same questions will give different answers.
+  In this case, setting multiple iterations will help ensure consistency across the same conversation
+  for your Bot.
+</Callout>
+
+For example, If you have 1 Test with 3 Variants and you set the iteration count to 2,
+bottest.ai would perform 6 Evaluations for that Test. Each resulting conversation
+would have different responses from the Bot, and would need to be evaluated:
+
+1. Variant A - Iteration 1
+2. Variant A - Iteration 2
+3. Variant B - Iteration 1
+4. Variant B - Iteration 2
+5. Variant C - Iteration 1
+6. Variant C - Iteration 2
+

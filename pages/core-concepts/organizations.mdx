@@ -1,0 +1,27 @@
+# Organizations
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+
+This guide will go over understanding what a bottest.ai Organization and User is.
+
+At its core, an Organization is a **group of bottest.ai users that want to share access to Bots, Suites,
+Tests, etc**.
+
+When you first setup your bottest.ai account, you won't be a part of any Organization. You can create
+Bots, Suites, Tests, etc just as a single user, but you won't be able to share this data with anyone else.
+
+With the appropriate billing tier, you can [create an Organization](/tutorials/create-an-organization),
+[invite others](/tutorials/invite-to-an-organization) and manage the users in the Organization. You can
+create Bots, Suites, Tests, etc under this Organization.
+
+There are three levels of permission for an Organization:
+1. **Admin**. This permission has full access to the Organization, including inviting others to join, management
+of the user roles, deletion of the organization and full testing capabilities (create, delete, edit, run
+Tests/Suites/Environments). This is the only role that can create new Bots for the Organization.
+
+2. **Editor**. This permission has full testing capabilities for all of the Organiation Bots. This means they
+can create new Tests/Suites/Environments, edit or delete existing ones, and run Tests or Suites.
+
+3. **Viewer**. This permission has limited testing capabilities for all of the Organization Bots. This means they
+can only view and run Tests or Suites, but cannot modify/delete or create new Test/Suites/Environments.

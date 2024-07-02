@@ -1,0 +1,34 @@
+# Suites
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+import { FileTree } from "nextra/components";
+
+
+This guide will go over understanding what a bottest.ai Suite is and how a Suite relates
+to the other bottest.ai concepts.
+
+At its core, a Suite represents **a group of Tests that are similar and would want to be grouped or
+organized together**. A Suite can be thought of as a folder within a file system, grouping together
+Tests that should be categorized together.
+
+<FileTree>
+    <FileTree.Folder name="Billing Suite" defaultOpen>
+        <FileTree.File name="Understand Current Bill" />
+        <FileTree.File name="Payment Options Availible" />
+        <FileTree.File name="Latest Invoice Charge" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Product Suite" defaultOpen>
+        <FileTree.File name="Key Features" />
+        <FileTree.File name="Setup and Usage" />
+        <FileTree.File name="Troubleshooting Tips" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Pricing Suite" defaultOpen>
+        <FileTree.File name="Cost of Premium Subscription" />
+        <FileTree.File name="Availible Discounts" />
+        <FileTree.File name="Explain Pricing Tiers" />
+    </FileTree.Folder>
+</FileTree>
+
+All Tests in a Suite will be ran together (during [Suite Runs](/core-concepts/suite-runs)),
+so it's best to organize Tests into Suites that assess a specific aspect of your Bot.

@@ -1,0 +1,20 @@
+# Tests
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+
+
+This guide will go over understanding what a Test is and how a Test relates to the other bottest.ai concepts.
+
+At its core, a Test represents **a single specific scenario you want your chatbot to be able to handle correctly**.
+A Test can be thought of as the semantic meaning behind a request or series of prompts. A Test is more than a sequence
+of specific prompts, since there are practically unlimited ways to phrase the same question.
+
+For example, a single Test might be asking your chatbot how to initiate a refund, and then having
+follow-up questions regarding the specifics of an order. There are many syntactically different
+ways to ask each of those prompts with the same semantic meaning, but they would all fit under
+a single Test, possibly named "Initiate a Refund." The specifics on how those questions were
+asked would be specified at the [Variant level](/core-concepts/variants).
+
+When Tests are executed they create [Test Runs](/core-concepts/test-runs), regardless of whether they were ran
+as a [Suite Run](/core-concepts/suite-runs) or individually.

@@ -1,0 +1,26 @@
+# Bots
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+
+This guide will go over understanding what a bottest.ai Bot is and how a Bot relates
+to the other bottest.ai concepts.
+
+At its core, a Bot represents **the overall project or Test repository for a single chatbot product**.
+For example, you will want to setup 2 Bots if you have both a customer-facing support chatbot and
+an internal chatbot to help with your company resource documentation. These are two separate "products"
+or "projects" and should be organized as such.
+
+
+A Bot can have multiple distinct Suites of Tests that belong to it. For example, under a customer support
+chatbot you might have a Suite for all Tests that involve refund requests, a different Suite for questions you
+might want to be escalated to a human agent, and another Suite to ensure safety with the chatbot (these
+Tests might have attempted jailbreaks and other adversarial-based Tests). More information on how best
+to organize Suites is in the [Suites page](/core-concepts/suites).
+
+
+A Bot can also have many distinct Environments that it's deployed to. Despite these chatbots being at
+different URLs (for example, you might have a deployed chatbot at your production URL and a development
+one that is only accesable when on VPN), they still represent the same underlying Bot.
+It's useful to have the same Suites of Tests and easy ability to compare across Environments. More information
+on how to best organize Environments is in the [Environments page](/core-concepts/environments).

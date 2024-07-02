@@ -6,11 +6,9 @@ This guide will go over the basics of using the [bottest.ai Dashboard](https://b
 to viewing and managing Test Run results. You can always navigate to the Dashboard by clicking "Dashboard"
 in the menu on the left.
 
-<StyledImage
-    path="/assets/guides/dashboard/1.svg"
-/>
+<StyledImage path="/assets/guides/dashboard/1.svg" />
 
-## Managing Tests
+## Viewing Tests
 
 You can manage which Tests will be shown in your Dashboard using 3 tools:
 1. **Bot/Suite/Environment Dropdowns**. You can use these dropdowns to change which Tests are shown
@@ -21,7 +19,7 @@ recent statuses to show the Test Run statuses for the selected Environment.
 
 All Tests belong to a Suite, and all Suites belong to a Bot. If you're unsure how you should
 organize your Tests into Suites and Bots, check out the documentation on
-[How to Organize your Data](/guides/how-to-organize-your-data).
+[Bots](/core-concepts/bots), [Suites](/core-concepts/suites), and [Environments](/core-concepts/environments).
 
 2. **Filters**. You can use the pre-set filters to only display the Tests that match the criteria.
 For the time being, there are only pre-set filters for each Status, however *custom filters and
@@ -34,5 +32,40 @@ Note that you can only search from the Tests shown under the selected Suite.
 
 ## Running Tests
 
+You can run Tests in the Dashboard either individually (using the Run Test button to the right of a Test):
+
+<StyledImage path="/assets/guides/dashboard/4.svg" />
+
+Or you can run all Tests in the full Suite using the "Run all Tests" button:
+
+<StyledImage path="/assets/guides/dashboard/5.svg" />
+
 ## Editing Tests
 
+You can edit Tests in the Dashboard using the gear icon to the right of each Test:
+
+<StyledImage path="/assets/guides/dashboard/6.svg" />
+
+It will open a modal view in which you are able to modify the Test's fields.
+You can click the "Custom" button to the right of "Suite's default" to override the Suite's customized
+value and set a Test specific one. To understand what each of these options mean,
+check out the documentation on [Tests](/core-concepts/tests).
+
+<StyledImage path="/assets/guides/dashboard/7.svg" />
+
+In this view, you can also download Test Baselines, disable the Test from running in Suite Runs (these are
+when you press the "Run all Test" button), and delete the Test.
+
+## Creating Tests
+
+You can't record Tests directly from the Dashboard, only from the [bottest.ai Chrome Extension](/guides/chrome-extension) (this is
+because bottest.ai webpage doesn't have access to data from other browser tabs).
+
+However, there is a button that will conveniently open up the extension and bring you right to the
+recording screen (as long as you have the bottest.ai Chrome Extension downloaded):
+
+<StyledImage path="/assets/guides/dashboard/5.svg" />
+
+For specific information on what you can do from the bottest.ai Chrome Extension, visit the
+[corresponding Guide section](/guides/chrome-extension). To get a walkthrough on how to record
+new Tests, visit the tutorial on how to [Record a Test](/tutorials/record-a-test).

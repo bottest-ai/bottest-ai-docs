@@ -1,0 +1,131 @@
+# Analytics
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+
+This guide will go over the basics of using the [bottest.ai Analytics Page](https://bottest.ai/app/analytics),
+including how they are gathered and what each chart means. You can always navigate to the Analytics Page by
+clicking "Analytics" in the menu on the left. **Note that all Analytics are for Suite Runs only. Individual Test
+Runs will not show up in this data**.
+
+<Image
+    src="/assets/guides/analytics/1.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+## Viewing Analytics
+
+You can manage which Bot's/Suite's/Environment's analytics will be shown using the dropdown menus:
+
+<StyledImage path="/assets/guides/analytics/2.svg" />
+
+All Tests belong to a Suite, and all Suites belong to a Bot. If you're unsure how you should
+organize your Tests into Suites and Bots, check out the documentation on
+[Bots](/core-concepts/bots), [Suites](/core-concepts/suites), and [Environments](/core-concepts/environments).
+
+## Understanding Each Chart
+
+This next section will go over each chart in the Analytics section and explain what is being
+measured, and the possible implications or insights to look out for with each one.
+
+### Success
+
+The Success category has 3 charts:
+
+1. **Evaluations Performed**. This chart measures the number of total evaluations performed in the last 10
+Suite Runs.
+
+<Image
+    src="/assets/guides/analytics/3.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+You are recommended to keep and eye on this chart to monitor the size of your
+Test Suite as it grows and new Tests/Variants are added or iteration count is increased.
+Additionally, this chart gives context to some of the other charts. For example, if your last 10 Suite Runs have
+had a trend of increasing number of evaluations while the evaluation pass rates have been declining, it may be
+the case that *only the new Tests added are failing*. However, if the evaluations performed is consistent and
+pass rates are lowering, it means there is some level of regression happening in the chatbot performance.
+
+2. **Test Statuses**. This chart measures the Test Status percentages for the last 10 Suite Runs.
+
+<Image
+    src="/assets/guides/analytics/4.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+You are recommended to watch this chart to see the trend of how Tests are performing over time. You will want
+to watch to make sure that Pass rates are increasing, while Fail rates are either turning into Mixed or Pass.
+This helps gives insight into the performance of your Tests on a high level.
+
+3. **Evaluation Pass Rate**. This chart measures the total evaluation pass rates for the last 10 Suite Runs.
+
+<Image
+    src="/assets/guides/analytics/5.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+While this is similar to the Test Statuses, this gives the actual underlying evaluation pass rate across all
+Tests in the Suite Runs. This chart is especially useful if the previous chart contains a lot of Mixed statuses.
+It's hard to know if those Mixed are 90% passed with 10% failed, or 90% failed with 10% passed. This chart helps
+give important insight into the overall performance of your Tests across all evaluations.
+
+### Performance
+
+The Performance category has 1 chart to measure the Test execution time for the last 10 Suite Runs.
+This chart provides a box plot of the distribution of all execution times (the time it takes
+for the each conversation to happen on the webpage).
+
+<Image
+    src="/assets/guides/analytics/6.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+This is helpful for tracking the response time from your chatbot on a high level, and see if your chatbot's
+performance is trending worse.
+
+
+### Usage
+
+The Usage category has 2 sections to help your team manage your usage of the bottest.ai Platform:
+
+1. **Test Runs Performed in the last month**. This chart breaks down the total Test Runs performed
+during Suite Runs and individually on a day-by-day basis for the last month (for the selected Suite +
+Environment).
+
+<Image
+    src="/assets/guides/analytics/7.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+You should use this data to understand on which days Test Runs are ran, and the extent to your usage for
+the selected Suite and Environment.
+
+2. **Plan Information and Usage**. This widget shows your current to-date usage for the pricing plan that is selected.
+You can keep an eye on this tracker to see if your team might want to upgrade or downgrade in the pricing plan.
+
+<Image
+    src="/assets/guides/analytics/8.svg"
+    alt="Image"
+    width={500}
+    height={250}
+    style={{ borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>

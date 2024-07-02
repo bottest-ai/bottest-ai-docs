@@ -1,10 +1,23 @@
 {
     "record-a-test": "Record a Test",
+    "disable-a-test": "Disable a Test",
+    "delete-a-test": "Delete a Test",
     "create-a-bot": "Create a Bot",
+    "delete-a-bot": "Delete a Bot",
+    "copy-a-bot": "Copy a Bot",
     "create-a-suite": "Create a Suite",
-    "add-an-environment": "Add an Environment",
-    "add-a-baseline": "Add a Baseline",
-    "add-a-variant": "Add a Variant",
+    "edit-a-suite": "Edit a Suite",
+    "copy-a-suite": "Copy a Suite",
+    "delete-a-suite": "Delete a Suite",
     "run-a-suite": "Run a Suite",
-    "create-an-organization": "Create an Organization"
+    "add-an-environment": "Add an Environment",
+    "delete-an-environment": "Delete an Environment",
+    "add-a-baseline": "Add a Baseline",
+    "delete-a-baseline": "Delete a Baseline",
+    "add-a-variant": "Add a Variant",
+    "delete-a-variant": "Delete a Variant",
+    "create-an-organization": "Create an Organization",
+    "invite-to-an-organization": "Invite to an Organization",
+    "delete-an-organization": "Delete an Organization",
+    "upgrade-pricing-plan": "Upgrade Pricing Plan"
 }

@@ -1,0 +1,22 @@
+# Environments
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+import { Callout } from "nextra/components";
+
+This guide will go over understanding what a bottest.ai Environment is and how an Environment
+relates to the other bottest.ai concepts.
+
+At its core, an Environment represents **a single deployed version of the Bot**. Similar to the concept
+of environments in traditional software development, a single product will often be deployed in many places
+for distinct reasons (Production, Development, Staging, Features). Environments belong to Bots (not Suites),
+so you can easily setup the Environments you need for your product and share the Test Suites across all of them.
+
+When creating a new Environment, you simply provide the URL of where the chatbot is deployed. bottest.ai will assume that
+the HTML/DOM layout of the webpage is functionally the same as the original recorded environment for its replay functionality.
+
+<Callout type="warning" emoji="⚠️">
+  Having a different DOM layout or large functional changes to the DOM will break Test replay ability between Environments.
+</Callout>
+
+Changing the selected Environment will update Test/Suite Run data to show the corresponding data in that Environment.

@@ -1,0 +1,69 @@
+# Chrome Extension
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+
+This guide will go over the basics of using the [bottest.ai Chrome Extension](),
+including recording, running and viewing results of Tests. You can download the
+Chrome Extension [here]().
+
+<StyledImage path="/assets/guides/chrome-extension/1.svg" />
+
+## Viewing Tests
+You can manage which Test will be shown in the Chrome Extension using the 3 dropdowns at the top.
+To keep the Chrome Extension UI clean, these dropdowns will only be visible if you have more than
+one Bot, Suite, or Environment to choose from.
+
+
+## Recording Tests
+
+The bottest.ai Chrome Extension is the only way to add/record new Tests. When first
+downloading the extension, you will be onboarded with a tutorial on how to record
+your first Test. After the tutorial, you will need to press the "Create new Test"
+button and follow the on-screen instructions to record a conversation.
+
+You have the option of naming and saving the Test after recording. The only way
+to modify the Test configuration (such as the Success Criteria, Variants, etc.)
+is through the bottest.ai Dashboard.
+
+## Running Tests
+
+### Test Runs
+
+You can run Tests by pressing the "Play" button to the left of each Test name. Doing
+so will open a new browser tab and begin replaying the conversation. Depending on the Test's
+configured number of Variants and Iterations, multiple tabs may be opened. While a Test
+is playing, you can press the "Stop" button to the left of the Test to stop the Test's
+execution.
+
+The Tests will execute automatically as long as Google Chrome stays open. You can close the
+Chrome Extension or minimize Google Chrome altogether and the Tests will continue to execute
+as normal in the background.
+
+Upon a Test completing, the tab will automatically close. If the Test seems to be frozen, the
+replay logic may be waiting an additional few seconds to ensure the chatbot has completely finished
+responding. **You can always open the extension when on a replaying tab to view the current progress**:
+
+A Test that is still running will show:
+<StyledImage path="/assets/guides/chrome-extension/2.svg" />
+
+### Suite Runs
+
+You can initiate a Suite Run in the bottest.ai Chrome Extension with the
+"Run all Tests" button. This will execute all Tests in the Suite and Environment chosen
+in the dropdowns.
+
+If you have disabled a Test from being included in Suite Runs from the bottest.ai Dashboard,
+it will be displayed as grayed out:
+
+<StyledImage path="/assets/guides/chrome-extension/3.svg" />
+
+## Viewing Test Results
+
+Next to each Test is the status of the most recent Test Run. Hovering over the colored circle
+will provide the name of the status:
+
+<StyledImage path="/assets/guides/chrome-extension/4.svg" />
+
+Changing the Environment in the dropdown will update the status displayed to show the most recent
+Test Run status in that Environment.

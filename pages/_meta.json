@@ -2,11 +2,13 @@
   "index": "Overview",
   "getting-started": "Getting Started",
   "guides": "Guides",
-  "tutorials": "Tutorials",
   "core-concepts": "Core Concepts",
+  "tutorials": "Tutorials",
   "about": {
     "title": "About",
-    "type": "page"
+    "type": "page",
+    "href": "https://bottest.ai/company/about/",
+    "newWindow": true
   },
   "contact": {
     "title": "Contact ↗",

@@ -1,0 +1,19 @@
+# Suite Runs
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+
+This guide will go over understanding what a Suite Run is and how a Suite Run relates to the other
+bottest.ai concepts.
+
+At its core, a Suite Run represents **the combined execution of all Tests within a Suite,
+including each Test's multiple Variants and iterations**. Similar to a Test Run,
+a Suite Run can have the following statuses:
+
+1. **Pass**: All Test Runs in the Suite Run received a Pass. This means all Evaluations passed.
+2. **Fail**: All Test Runs in the Suite Run received a Fail. This means all Evaluations failed.
+3. **Mixed**: The Test Runs in the Suite Run have a mixture of Pass, Fail, Mixed, or other statuses.
+3. **Running**: The Suite Run is currently running (or the results are still being parsed/evaluated)
+4. **Stopped**: The Suite Run was stopped manually before completing.
+5. **Error**: The Suite Run was stopped due to one or more errors during execution or evaluation.
+

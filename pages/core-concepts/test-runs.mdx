@@ -1,0 +1,21 @@
+# Test Runs
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+
+This guide will go over understanding what a Test Run is and how a Test Run relates to the other
+bottest.ai concepts.
+
+At its core, a Test Run represents **a single execution of a Test, including multiple Variants and iterations**.
+A Test Run can have the following statuses:
+
+1. **Pass**: All Evaluations in the Test Run received a Pass.
+2. **Fail**: All Evaluations in the Test Run received a Fail.
+3. **Mixed**: Some Evaluations in the Test Run are Pass and some are Fail.
+4. **Skipped**: The Test was configured to not be included in a Suite Run before the Suite Run was executed.
+5. **Running**: The Test Run is currently running (or the results are still being parsed/evaluated).
+6. **Stopped**: The Test Run was stopped manually before completing.
+7. **Error**: The Test Run was stopped due to one or more errors during execution or evaluation.
+
+A Test Run can be a part of a [Suite Run](/core-concepts/suite-runs) (if the user decides to run a Suite), or individually.
+Test Runs won't show up in Analytics or Reports (except for the Usage data) if they were ran individually.

@@ -1,0 +1,75 @@
+# Variants
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+import { Tabs } from "nextra/components";
+
+
+This guide will go over understanding what a Variant is and how a Variant relates to the other bottest.ai
+concepts.
+
+At its core, a Variant represents **a unique variation or instantiation of a Test's prompts**. There are
+many slightly different ways that a user can ask the same question or series of questions. A Variant is
+a single variation of those many possibilites. Variants allow you to ensure that your Bot correctly
+answers when it is presented with different phrasing ([small changes in prompts can cause large differences
+in responses from LLMs](https://arxiv.org/html/2401.03729v2)).
+
+For example, let's say your original recorded conversation is:
+
+`User: What is the status of my order?`
+
+`Bot: ...`
+
+`User: My order number is #23051039 and the email is joner@example.com`
+
+`Bot: ...`
+
+If you were to generate 5 Variants of the original recording, you might get the following:
+
+<Tabs items={['Variant 1', 'Variant 2', 'Variant 3', 'Variant 4', 'Variant 5']}>
+  <Tabs.Tab>
+    `User: Can you give me an update on my order?`
+
+    `Bot: ...`
+
+    `User: The order number is #23051039, and the email is joner@example.com.`
+
+    `Bot: ...`
+  </Tabs.Tab>
+  <Tabs.Tab>
+    `User: What’s happening with my order right now?`
+
+    `Bot: ...`
+
+    `User: My order number is #23051039, and my email that's associated with it is joner@example.com.`
+
+    `Bot: ...`
+  </Tabs.Tab>
+  <Tabs.Tab>
+    `User: Could you tell me the current status of my order?`
+
+    `Bot: ...`
+
+    `User: The order number is #23051039, and my email address is joner@example.com.`
+
+    `Bot: ...`
+  </Tabs.Tab>
+  <Tabs.Tab>
+    `User: I need to check the status of my order. Can you help?`
+
+    `Bot: ...`
+
+    `User: The order number is #23051039, and the email used for the order is joner@example.com.`
+
+    `Bot: ...`
+  </Tabs.Tab>
+  <Tabs.Tab>
+    `User: What's the status of my order, please?`
+
+    `Bot: ...`
+
+    `User: Order number: #23051039, email: joner@example.com.`
+
+    `Bot: ...`
+  </Tabs.Tab>
+</Tabs>

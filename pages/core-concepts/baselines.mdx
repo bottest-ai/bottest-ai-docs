@@ -1,0 +1,53 @@
+# Baselines
+
+import StyledImage from "../../components/styledImage";
+import Image from "next/image";
+import { Tabs } from "nextra/components";
+
+This guide will go over understanding what a Baseline is and how a Baseline relates to the other bottest.ai
+concepts.
+
+At its core, a Baseline represents **a valid/optimal set of responses given by the chatbot in a conversation**.
+When Tests are evaluated, the Baselines are used to tell the bottest.ai Evaluation Engine what a "Pass"
+should look like.
+
+When a Test is first recorded, the Bot's responsese in the recording is parsed as the first Baseline.
+
+You can also setup more than one Baselines for a single Test if there are multiple distinct but
+correct ways for a chatbot to respond to the prompts.
+
+For example, in the following example conversations while the answers vary to the same prompt, both
+responses can be deemed as valid or correct. This is generally useful in the case of open-ended questions,
+where there might be many "correct" responses:
+
+<Tabs items={['Example 1', 'Example 2', 'Example 3']}>
+    <Tabs.Tab>
+    `User: Give me one difference between SSDs and HDDs.`
+
+    `Bot: SSDs (Solid State Drives) use flash memory to store data, which allows for much faster read and write speeds compared to HDDs (Hard Disk Drives), which use spinning magnetic disks.`
+
+    `User: Can you show me a source that supports that answer?`
+
+    `Bot: Certainly! You can refer to this article from PCMag: https://www.pcmag.com/news/ssd-vs-hdd-whats-the-difference`
+    </Tabs.Tab>
+
+    <Tabs.Tab>
+    `User: Give me one difference between SSDs and HDDs.`
+
+    `Bot: SSDs are more durable and reliable than HDDs because they have no moving parts, making them less susceptible to physical damage and wear over time, while HDDs are more prone to mechanical failures.`
+
+    `User: Can you show me a source that supports that answer?`
+
+    `Bot: Sure! This article from How-To Geek: https://www.howtogeek.com/172933/why-solid-state-drives-are-more-reliable-than-hard-drives/`
+    </Tabs.Tab>
+
+    <Tabs.Tab>
+    `User: Give me one difference between SSDs and HDDs.`
+
+    `Bot: One of the main differences between SSDs and HDDs is power consumption. SSDs typically consume less power, whereas HDDs generally consume more power due to their mechanical components.`
+
+    `User: Can you show me a source that supports that answer?`
+
+    `Bot: Of course! This Tom's Hardware article: https://www.tomshardware.com/reviews/ssd-vs-hdd,5625.html`
+    </Tabs.Tab>
+</Tabs>
