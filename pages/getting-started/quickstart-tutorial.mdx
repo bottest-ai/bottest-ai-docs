@@ -2,9 +2,10 @@
 
 Getting started with bottest.ai is easy and fast. This guide will help you go from square one to
 running your first Test in just a few minutes. If you prefer a video to follow along the tutorial
-feel free to check out the [Quickstart Tutorial Video](https://youtube.com/@bottest-ai).
+feel free to check out the [Quickstart Tutorial Video](https://youtube.com/@bottest-ai) (coming soon).
 
 import { Steps } from "nextra/components";
+import StyledImage from "../../components/styledImage";
 import Image from "next/image";
 
 <Steps>
@@ -14,56 +15,98 @@ or [log in](https://bottest.ai/sign-in) to bottest.ai to make sure you are authe
 
 ### Download the Chrome Extension
 All Tests are recorded in the browser using the bottest.ai Chrome Extension. You can download the
-extension [here]().
+extension [here](https://chromewebstore.google.com/detail/bottestai/pagedbefhikbkdlkmhfohdlafjkielln).
 
-If you recently signed in on the browser, when opening the Chrome Extension
-you should see the below screen. You can then proceed to the next step.
-If you see the Log in or Sign up screen, you will need authenticate before continuing with the tutorial.
-
+It's recommended to pin the bottest.ai Chrome Extension for easy access:
 <Image
-    src="/assets/quickstart-tutorial/chrome-extension-1.svg"
-    width={0}
-    height={0}
-    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px"}}
+    src="/assets/quickstart-tutorial/pin.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
 />
 
+When you open the extension you should see the following:
+<Image
+    src="/assets/quickstart-tutorial/extension-welcome.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
 
 ### Record a Test
-Follow the instructions displayed on the Chrome Extension:
 
-1. Navigate to the website where your chatbot is located,
-then press the button that says "I'm on my chatbot's website."
+1. First, open the webpage where your chatbot is located (ie: a [customGPT](https://chatgpt.com/g/g-VWc8jWpsp-luxwatch-vault-customer-service-bot))
+Then, open the bottest.ai extension. After clicking "Let's Go" on the initial welcome page, you should see the below screen.
+Double check that the tab you are currently on is the correct one with your chatbot's interface. If so,
+click "I'm on my chatbot's website" and go to the next step.
 
-[gif here]
+<Image
+    src="/assets/quickstart-tutorial/extension-check-site.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
 
-2. Press the "Start Recording" button to start recording your interactions with the
-webpage, then begin having your conversation with the chatbot. The questions you ask
-your chatbot will be stored as the prompts when running the Test, and the answers that
+2. Press the "Record" button, and then start sending messages to your chatbot. The questions you ask
+your chatbot will be stored as the prompts for the Test, and the answers that
 the chatbot gives will be stored as a Baseline to compare future responses against.
 
-[gif here]
+<Image
+    src="/assets/quickstart-tutorial/extension-start-record.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
 
 *bottest.ai will never
-record your interactions outside of this Test Recording state, or without your
- permission. Please visit our [Privacy Policy](https://bottest.ai/privacy-policy) and
+record your interactions outside of this Test recording state, or without your
+permission. Please visit our [Privacy Policy](https://bottest.ai/privacy-policy) and
 [Terms of Service](https://bottest.ai/terms-of-service) for more information on
 how we use your data.*
 
 3. When you have finished your conversation, re-open the Chrome Extension and press the
-"Stop Recording" button. You can then name your newly recorded Test.
-If you want to re-record your Test, press the "Cancel" button. Once you're happy with
-your recorded Test, go to the next step.
+"Stop Recording" button. You can then name your newly recorded Test. If you want to
+re-record your Test, press the "Cancel" button to delete your recording.
 
-[gif here]
+<Image
+    src="/assets/quickstart-tutorial/extension-stop-recording.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
 
 ### Replay the Test
-Press the "Run Test" button on the extension, and watch as a new tab is opened and
-your questions are re-asked to the chatbot. The new responses your chatbot gives will
-be sent to bottest.ai and compared against the original recorded (Baseline) responses.
+After creating your Test, you'll be instructed to run it. After you press the "Run Test" button
+on the extension, a new tab will open and your questions are re-asked to the chatbot.
+The new responses your chatbot gives will be sent to bottest.ai and compared against the
+original recorded (Baseline) responses.
 
-You can reopen the extension to check if the Test is still running, or if it has completed.
-Once the Test is finished running, you should see the below screen. Click "Take me
-to my dashboard" to visit the bottest.ai Chrome Extension Dashboard and proceed to the next step.
+<Image
+    src="/assets/quickstart-tutorial/extension-run-test.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+
+Once the extension finished replaying the Test, you'll see the following message onscreen. You can
+then open the extension and view your results in the extension Dashboard.
+
+<Image
+    src="/assets/quickstart-tutorial/replay-finished.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
 
 ### Review the results
 When first opening the bottest.ai Chrome Extension Dashboard, there will be a Product Tour to help get
@@ -72,11 +115,11 @@ and view Pass/Fail Results.
 
 You should see in the Dashboard that your Test is listed with a status next to it.
 
-[image]
+<StyledImage path="/assets/quickstart-tutorial/2.svg" />
 
 *If the status still says "Running,"
 it's because the chatbot responses are still being evaluated and compared against the Baseline. This may take
-a few minutes depending on the length of the conversation*.
+a few seconds depending on the length of the conversation*.
 
 
 </Steps>

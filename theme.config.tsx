@@ -1,7 +1,7 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
+import React from "react"
+import { DocsThemeConfig } from "nextra-theme-docs"
+import Image from "next/image"
+import { useRouter } from "next/router"
 
 const config: DocsThemeConfig = {
   logo: (
@@ -13,16 +13,16 @@ const config: DocsThemeConfig = {
     />
   ),
   project: {
-    link: 'https://github.com/bottest-ai/bottest-ai-docs',
+    link: "https://github.com/bottest-ai/bottest-ai-docs",
   },
-  docsRepositoryBase: 'https://github.com/bottest-ai/bottest-ai-docs',
+  docsRepositoryBase: "https://github.com/bottest-ai/bottest-ai-docs/blob/main",
   footer: {
     component: <></>,
   },
   useNextSeoProps() {
     const { asPath } = useRouter()
     return {
-      titleTemplate: '%s | bottest.ai Docs'
+      titleTemplate: "%s | bottest.ai Docs"
     }
   },
   primaryHue: 213,
