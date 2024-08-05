@@ -17,9 +17,18 @@ or [log in](https://bottest.ai/sign-in) to bottest.ai to make sure you are authe
 All Tests are recorded in the browser using the bottest.ai Chrome Extension. You can download the
 extension [here](https://chromewebstore.google.com/detail/bottestai/pagedbefhikbkdlkmhfohdlafjkielln).
 
-It's recommended to pin the bottest.ai Chrome Extension for easy access:
+You will want to pin the bottest.ai Chrome Extension for easy access:
 <Image
     src="/assets/quickstart-tutorial/pin.png"
+    alt="Image"
+    width={1440}
+    height={960}
+    style={{ width: "100%", height: "auto", borderRadius: "20px", marginTop: "20px", marginBottom: "10px", border: "2px dashed #388AEB" }}
+/>
+
+Now, you should be able to access the bottest.ai extension by clicking the icon in the top right of your Chrome browser:
+<Image
+    src="/assets/quickstart-tutorial/open-extension.png"
     alt="Image"
     width={1440}
     height={960}
@@ -37,10 +46,11 @@ When you open the extension you should see the following:
 
 ### Record a Test
 
-1. First, open the webpage where your chatbot is located (ie: a [customGPT](https://chatgpt.com/g/g-VWc8jWpsp-luxwatch-vault-customer-service-bot))
+1. First, open a Chrome tab at the URL where your chatbot is located (ie: a [customGPT](https://chatgpt.com/g/g-VWc8jWpsp-luxwatch-vault-customer-service-bot)).
 Then, open the bottest.ai extension. After clicking "Let's Go" on the initial welcome page, you should see the below screen.
-Double check that the tab you are currently on is the correct one with your chatbot's interface. If so,
-click "I'm on my chatbot's website" and go to the next step.
+Double check that the tab you are currently on is the correct one with your chatbot's interface.
+**You need to be logged in to your chatbot's website before starting your recording.**
+Once you have double checked that, click "I'm on my chatbot's website" and go to the next step.
 
 <Image
     src="/assets/quickstart-tutorial/extension-check-site.png"
@@ -51,8 +61,9 @@ click "I'm on my chatbot's website" and go to the next step.
 />
 
 2. Press the "Record" button, and then start sending messages to your chatbot. The questions you ask
-your chatbot will be stored as the prompts for the Test, and the answers that
-the chatbot gives will be stored as a Baseline to compare future responses against.
+your chatbot will be stored as the prompts for the Test, and the answers that the chatbot gives will
+be stored as a Baseline to compare future responses against. **You will need to re-open the extension
+to stop the recording once you finish your conversation.**
 
 <Image
     src="/assets/quickstart-tutorial/extension-start-record.png"
@@ -96,7 +107,7 @@ original recorded (Baseline) responses.
 />
 
 
-Once the extension finished replaying the Test, you'll see the following message onscreen. You can
+After the extension finishes replaying the Test, you'll see the following message onscreen. You can
 then open the extension and view your results in the extension Dashboard.
 
 <Image
@@ -124,7 +135,7 @@ a few seconds depending on the length of the conversation*.
 
 </Steps>
 
-Congratulations! You've successfully created and run your first Test!
+Congratulations! You've successfully recorded and replayed your first Test!
 
 ### Next Steps
 
